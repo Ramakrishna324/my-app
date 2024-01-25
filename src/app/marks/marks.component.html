@@ -1,30 +1,35 @@
-<h1>Subject Results</h1>
-
-<table border="3px">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Marks</th>
-            <th>Result</th>
-        </tr>
-
-    </thead>
-    <tbody>
-        <tr *ngFor="let mark of marks">
-            <td>{{mark.name}}</td>
-            <td>{{mark.subject | uppercase}}</td>
-            <td [ngStyle]="{'color': mark.marks<35?'red':'green'}">{{mark.marks}}</td>
-            <td [ngClass]="{ 'pink':mark.marks<35,'green':mark.marks>=35}">{{mark.result}}</td>
-
-        </tr>
-
-
-    </tbody>
-</table>
-<br><br>
-<h2>{{today | date:'dd-yy'}}</h2>
-
-
-
-
+<div class="parent">
+    <div class="main">
+        <h1>Subject Results</h1>
+    
+    <table border="3px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Result</th>
+            </tr>
+    
+        </thead>
+        <tbody>
+            <tr *ngFor="let mark of marks">
+                <td>{{mark.name}}</td>
+                <td>{{mark.subject | uppercase}}</td>
+                <td [ngStyle]="{'color': mark.marks<35?'red':'green'}">{{mark.marks}}</td>
+                <td [ngClass]="{ 'pink':mark.marks<35,'green':mark.marks>=35}">{{mark.result}}</td>
+    
+            </tr>
+    
+    
+        </tbody>
+    </table>
+    <br><br>
+    <h2>{{today | date:'dd-yy'}}</h2>
+    
+    
+    
+    
+    
+    </div>
+</div>
