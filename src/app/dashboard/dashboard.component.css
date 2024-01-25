@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(15, 13, 13);
+    display: flex;
+    
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    color: white;
+   
+    
+}
+.top{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+.middle{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    
+    /* display: block; */
+}
+.bottom{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(192, 255, 216);
+    overflow: auto;
+}
+.logout button{
+    background-color: red;
+    color: white;
+    font-size: larger;
+    border-radius: 8px;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 40px;
+    
+    
+}
+.left h2{
+    cursor: pointer;
+}
+.middle :hover {
+    background-color: rgb(53, 52, 52);
+
+}
+h2{
+    font-style: italic;
+}

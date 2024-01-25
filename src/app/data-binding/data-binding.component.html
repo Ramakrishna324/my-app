@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="data">
+    
+<br><br>
+
+<h3>My name is {{name}}</h3>
+<br>
+<h3>My age is {{age}}</h3>
+<br>
+<h3>Age: {{ages}}</h3>
+<br>
+<h3>Names: {{names}}</h3>
+<br>
+<h3>User: {{user}}</h3>
+<br><br>
+<button (click)="submit()"><h3>Submit</h3></button>
+<br><br>
+<input (keypress)="key()" type="text">
+<br><br>
+<label for="">Enter Phone No:</label>
+<input type="text" [(ngModel)]="phone">
+{{phone}}
+    </div>
+</div>
