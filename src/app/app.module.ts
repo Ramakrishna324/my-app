@@ -21,6 +21,14 @@ import { MarksComponent } from './marks/marks.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { PricePipe } from './price.pipe';
 import { StarPipe } from './star.pipe';
+import { EventComponent } from './event/event.component';
+import { CarsComponent } from './cars/cars.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { BikesComponent } from './bikes/bikes.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccoumtsComponent } from './accoumts/accoumts.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +49,21 @@ import { StarPipe } from './star.pipe';
     MarksComponent,
     ShoppingComponent,
     PricePipe,
-    StarPipe
+    StarPipe,
+    EventComponent,
+    CarsComponent,
+    EmployeeComponent,
+    BikesComponent,
+    VehicleComponent,
+    AccoumtsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

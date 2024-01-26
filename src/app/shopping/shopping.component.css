@@ -38,8 +38,8 @@ button{
     background-color: rgb(63, 148, 182);
     color: white;
     border-radius: 6px;
-    margin: 8px;
-    margin-top: 15px;
+    /* margin: 8px; */
+    /* margin-top: 15px; */
     width: fit-content;
     
 

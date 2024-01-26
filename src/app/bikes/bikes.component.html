@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="top">
+        <h1>
+            <ins>Bikes:</ins>
+        </h1>
+        <br><br>
+    
+        <div>
+            <label for="K">Kawasaki Z900</label>
+        <input id="K" type="radio" name="bike" value=1 [(ngModel)]="bike"><br>
+        
+        <label for="XL heavy duty">XL heavy duty</label>
+        <input id="XL heavy duty" type="radio" name="bike" value=2 [(ngModel)]="bike"><br>
+        <label for="RE">RE Continental 650</label>
+        <input id="RE" type="radio" name="bike" value=3 [(ngModel)]="bike"><br>
+        <label for="yamaha">Yamaha MT 15 v2</label>
+        <input id="yamaha" type="radio" name="bike" value=4 [(ngModel)]="bike"><br>
+        </div>
+
+    </div>
+    <div class="bottom">
+
+       <div> <img *ngIf="bike==1" height="100%" width="100%" src="https://images.unsplash.com/photo-1655484246919-c63b7dec2d73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGthd2FzYWtpJTIwejkwMHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+        <img *ngIf="bike==2" height="100%" width="100%" src="https://media.zigcdn.com/media/model/2020/Apr/right-side-view-273796005_930x620.jpg" alt="">
+        <img *ngIf="bike==3" height="100%" width="100%" src="https://www.team-bhp.com/sites/default/files/styles/amp_high_res/public/Rocker%20Red%20GT%20650%201.jpeg" alt="">
+        <img *ngIf="bike==4" height="600px" width="300px" src="https://w0.peakpx.com/wallpaper/1000/645/HD-wallpaper-mt-15-black-and-white-yamaha-bike.jpg" alt=""></div>
+
+    </div>
+</div>

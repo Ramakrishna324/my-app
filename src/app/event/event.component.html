@@ -1,0 +1,23 @@
+<div class="main">
+    
+<h1><ins>Event Registration</ins></h1>
+<br><br>
+<input type="text" placeholder="Enter Name" [(ngModel)]="user.name">
+<label  for="">
+    <button (click)="submit()">Submit</button>
+</label>
+<br><br>
+<h2><ins>Registration Users:</ins></h2>
+<br><br>
+
+<ol>
+    <li *ngFor="let entry of entrys;let i = index">
+        {{entry.name}}
+        <!-- {{user.name}} -->
+        <button (click)="delete(i)">delete</button>
+
+    </li>
+</ol>
+<br><br>
+
+</div>

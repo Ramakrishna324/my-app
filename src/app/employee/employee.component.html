@@ -1,0 +1,41 @@
+<div class="main">
+  <div class="top">
+
+    <button (click)="eltoh()" class="btn-primary">Experience low to high</button>
+    <button (click)="ehtol()" class="btn-primary">Experience high to low</button>
+    <button (click)="pltoh()" class="btn-primary">Package low to high</button>
+    <button (click)="phtol()" class="btn-primary">Package high to ;ow</button>
+    <button (click)="hike()" class="btn-primary">Add 20% hike</button>
+    <button (click)="bonus()" class="btn-primary">50000 bonus</button>
+    <button (click)="db5()" class="btn-primary">developers (below 5 years exp)</button>
+    <button (click)="da5()" class="btn-primary">developers (above 5 years exp)</button>
+    <button (click)="totalc()" class="btn-primary">Total CTC</button>
+    <button (click)="totale()" class="btn-primary">Total employees</button>
+
+  </div>
+  <div class="bottom">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>S.NO</th>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Experience</th>
+          <th>Package</th>
+          <th>Worrking Employee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.company }}</td>
+          <td>{{ employee.experience }}</td>
+          <td>{{ employee.package }}</td>
+          <td>{{ employee.isWorking }}</td>
+          <td><button class=btn-danger>delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -16,6 +16,11 @@ import { DirectoriesComponent } from './directories/directories.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MarksComponent } from './marks/marks.component';
 import { ShoppingComponent } from './shopping/shopping.component';
+import { EventComponent } from './event/event.component';
+import { CarsComponent } from './cars/cars.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { BikesComponent } from './bikes/bikes.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -32,7 +37,12 @@ const routes: Routes = [
     {path:'directories',component:DirectoriesComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'marks',component:MarksComponent},
-    {path:'shopping',component:ShoppingComponent}
+    {path:'shopping',component:ShoppingComponent},
+    {path:'event',component:EventComponent},
+    {path:'cars',component:CarsComponent},
+    {path:'employee',component:EmployeeComponent},
+    {path :'bikes',component:BikesComponent},
+    {path : 'vehicles', component:VehicleComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component: NotfoundComponent}

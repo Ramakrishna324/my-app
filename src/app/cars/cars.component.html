@@ -1,0 +1,35 @@
+<div class="main">
+    <h1>
+        <ins>Cars:</ins>
+    </h1>
+    <br><br>
+
+    <label for="audi">Audi</label>
+    <input id="audi" type="radio" name="car" value=1 [(ngModel)]="car">
+    <label for="bmw">BMW</label>
+    <input id="bmw" type="radio" name="car" value=2 [(ngModel)]="car">
+    <label for="mustang">Mustang</label>
+    <input id="mustang" type="radio" name="car" value=3 [(ngModel)]="car">
+    <label for="ferrari">Ferrari</label>
+    <input id="ferrari" type="radio" name="car" value=4 [(ngModel)]="car">
+
+    <div  class="image">
+
+        <img *ngIf="car==3" height="400px" width="700px" src="https://images.pexels.com/photos/6509108/pexels-photo-6509108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+
+        <img *ngIf="car==2" height="400px" width="700px" src="https://images.pexels.com/photos/892522/pexels-photo-892522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+
+        <img *ngIf="car==1" height="400px" width="700px" src="https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+
+        <img *ngIf="car==4" height="400px" width="700px" src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        
+        {{car}}
+
+    </div>
+
+    <br><br><br>
+
+
+
+
+</div>
