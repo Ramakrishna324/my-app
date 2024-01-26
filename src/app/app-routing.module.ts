@@ -21,6 +21,7 @@ import { CarsComponent } from './cars/cars.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -42,7 +43,8 @@ const routes: Routes = [
     {path:'cars',component:CarsComponent},
     {path:'employee',component:EmployeeComponent},
     {path :'bikes',component:BikesComponent},
-    {path : 'vehicles', component:VehicleComponent}
+    {path : 'vehicles', component:VehicleComponent},
+    {path : 'accounts', component:AccountComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component: NotfoundComponent}
