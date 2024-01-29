@@ -1,0 +1,15 @@
+<div class="main">
+    
+    <div *ngFor="let id of mail" class="list" >
+        <div [ngStyle]="{'color':id.completed ? 'grey' :'black'}">
+            <div [ngStyle]="{'font-size':id.completed ? 'medium' :'larger'}">
+        
+       
+        
+       <b> {{id.title}} </b>
+    </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="product" *ngFor="let item of flipkart">
+        
+
+        <div><img height="200px" width="180px" src="{{item.image}}" alt=""></div>
+        <br>
+        <div class="title">
+            {{item.title}} 
+        </div><br>
+        {{item.price | price}} 
+        <div class="rating">
+            {{item.rating.rate}}&#x2605;
+            {{item.rating.count}}
+        </div>
+        <div class="desc">{{item.description}}</div>
+
+    </div>
+</div>

@@ -29,6 +29,10 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccoumtsComponent } from './accoumts/accoumts.component';
 import { AccountComponent } from './account/account.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { ActivityComponent } from './activity/activity.component';
+import { MemesComponent } from './memes/memes.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,11 @@ import { AccountComponent } from './account/account.component';
     BikesComponent,
     VehicleComponent,
     AccoumtsComponent,
-    AccountComponent
+    AccountComponent,
+    FlipkartComponent,
+    MailComponent,
+    ActivityComponent,
+    MemesComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,10 @@ import { EmployeeComponent } from './employee/employee.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccountComponent } from './account/account.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { ActivityComponent } from './activity/activity.component';
+import { MemesComponent } from './memes/memes.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -44,7 +48,11 @@ const routes: Routes = [
     {path:'employee',component:EmployeeComponent},
     {path :'bikes',component:BikesComponent},
     {path : 'vehicles', component:VehicleComponent},
-    {path : 'accounts', component:AccountComponent}
+    {path : 'accounts', component:AccountComponent},
+    {path : 'flipkart', component:FlipkartComponent},
+    {path : 'mail', component:MailComponent},
+    {path : 'activity', component:ActivityComponent},
+    {path : 'memes', component:MemesComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component: NotfoundComponent}

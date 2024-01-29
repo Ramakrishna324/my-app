@@ -1,0 +1,18 @@
+<div class="main">
+    <div *ngFor="let item of memes.data.memes" class="memes">
+
+
+
+
+        <div class="name">{{item.name}} </div><br>
+        <img height="{{item.height}}" width="{{item.width}}" src="{{item.url}}" alt=""><br>
+        {{item.box_count}} <br>
+    
+        {{item.id}} <br>
+        {{item.captions}}
+
+
+
+
+    </div>
+</div>
