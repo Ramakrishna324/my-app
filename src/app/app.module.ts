@@ -9,7 +9,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
@@ -33,6 +33,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
 import { MemesComponent } from './memes/memes.component';
+import { StudentsComponent } from './students/students.component';
+import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
 
 @NgModule({
   declarations: [
@@ -64,13 +66,16 @@ import { MemesComponent } from './memes/memes.component';
     FlipkartComponent,
     MailComponent,
     ActivityComponent,
-    MemesComponent
+    MemesComponent,
+    StudentsComponent,
+    PushvehiclesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

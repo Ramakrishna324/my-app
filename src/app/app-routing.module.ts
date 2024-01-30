@@ -26,6 +26,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
 import { MemesComponent } from './memes/memes.component';
+import { StudentsComponent } from './students/students.component';
+import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -52,7 +54,9 @@ const routes: Routes = [
     {path : 'flipkart', component:FlipkartComponent},
     {path : 'mail', component:MailComponent},
     {path : 'activity', component:ActivityComponent},
-    {path : 'memes', component:MemesComponent}
+    {path : 'memes', component:MemesComponent},
+    {path : 'students', component:StudentsComponent},
+    {path:'pushvehicles', component:PushvehiclesComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component: NotfoundComponent}
