@@ -1,0 +1,72 @@
+<div class="main">
+
+    <h1>Create User Form</h1>
+
+    <form action="" [formGroup]="userForm">
+
+
+        <label for="">Name :</label>
+        <input type="text" formControlName="name">
+        <br>
+        
+        <label for="">Age :</label>
+        <input type="text" formControlName="age">
+        <br>
+        
+        <label for="">Email :</label>
+        <input type="text" formControlName="email">
+        <br>
+        
+        <label for="">Phone :</label>
+        <input type="text" formControlName="phone">
+        <br>
+
+        <div formGroupName="address">
+
+            <label for="">House No. :</label>
+            <input type="text" formControlName="hno">
+            <br>
+            
+            <label for="">State :</label>
+            <input type="text" formControlName="state">
+            <br>
+            
+            <label for="">Pincode :</label>
+            <input type="text" formControlName="pincode">
+
+        </div>
+
+        <label for="">Cards :</label>
+        <button class="btn-warning" (click)="add()" >add</button>
+        <br>
+
+        <div formArrayName="cards">
+            <div *ngFor="let card of cardsFormArray.controls; let i=index">
+                <div formGroupName="{{i}}">
+
+                    <h2>Card {{i+1}}</h2>
+
+                    <label for="">Card No. :</label>
+                    <input type="text" formControlName="cardno">
+                    <br>
+                    
+                    <label for="">Expiry :</label>
+                    <input type="text" formControlName="expiry">
+                    <br>
+                    
+                    <label for="">cvv :</label>
+                    <input type="text" formControlName="cvv">
+                    <br>
+                    <button class="btn-danger" (click)="deletecard(i)">delete</button>
+
+                    <hr>
+        
+
+                </div>
+            </div>
+        </div>
+
+        <button (click)="submit()" class="btn-primary"  > Submit</button>
+
+    </form>
+</div>

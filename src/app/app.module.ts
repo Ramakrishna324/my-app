@@ -35,6 +35,9 @@ import { ActivityComponent } from './activity/activity.component';
 import { MemesComponent } from './memes/memes.component';
 import { StudentsComponent } from './students/students.component';
 import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
+import { CreatestudentsComponent } from './createstudents/createstudents.component';
+import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
     ActivityComponent,
     MemesComponent,
     StudentsComponent,
-    PushvehiclesComponent
+    PushvehiclesComponent,
+    CreatestudentsComponent,
+    CreateaccountsComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

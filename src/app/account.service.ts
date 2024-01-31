@@ -15,5 +15,12 @@ export class AccountService {
 
     }
 
+    createAccounts(data:any):Observable<any>
+    {
+      return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
+  
+    }
+  
+
    
 }

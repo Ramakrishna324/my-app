@@ -1,0 +1,27 @@
+<h2><ins>Enter Student details</ins></h2>
+<form [formGroup]="studentForm" action="">
+
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+
+    
+    <label for="">Phone:</label>
+    <input type="text" formControlName="phone">
+    <br>
+    
+    <label for="">City:</label>
+    <input type="text" formControlName="city">
+    <br>
+    
+    <label for="">Fee:</label>
+    <input type="text" formControlName="fee">
+    <br>
+    
+    <label for="">Image:</label>
+    <input type="text" formControlName="image">
+    <br>
+
+    <button  class="btn-danger"  (click)="submit()">SUBMIT</button>
+
+</form>

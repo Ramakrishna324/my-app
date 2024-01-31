@@ -1,12 +1,14 @@
 <div class="main">
     <div class="form">
+       <form action="" [formGroup]="loginForm">
         <label for="">Email : </label><br><br>
-        <input type="text">
+        <input type="text" formControlName="email">
         <br><br>
         
         <label for="">Password : </label><br><br>
-        <input type="text">
+        <input type="password" formControlName="password">
         <br><br><br><br><br>
-        <button routerLink="/dashboard">Login</button>
+        <button (click)="login()">Login</button>
+       </form>
     </div>
 </div>

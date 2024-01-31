@@ -28,10 +28,14 @@ import { ActivityComponent } from './activity/activity.component';
 import { MemesComponent } from './memes/memes.component';
 import { StudentsComponent } from './students/students.component';
 import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
+import { CreatestudentsComponent } from './createstudents/createstudents.component';
+import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
-  {path:'dashboard',component: DashboardComponent,children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard],component: DashboardComponent,children:[
     {path:'home',component:HomeComponent},
     {path:'',component:HomeComponent},
     {path:'about', component:AboutComponent},
@@ -56,7 +60,11 @@ const routes: Routes = [
     {path : 'activity', component:ActivityComponent},
     {path : 'memes', component:MemesComponent},
     {path : 'students', component:StudentsComponent},
-    {path:'pushvehicles', component:PushvehiclesComponent}
+    {path:'pushvehicles', component:PushvehiclesComponent},
+    {path:'createstudents', component:CreatestudentsComponent},
+    {path:'createaccounts', component:CreateaccountsComponent},
+    {path:'createuser',component:CreateUserComponent}
+
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component: NotfoundComponent}
