@@ -1,12 +1,12 @@
 <div class="main">
-    <div class="form">
+    <div class="form" >
        <form action="" [formGroup]="loginForm">
         <label for="">Email : </label><br><br>
-        <input type="text" formControlName="email">
+        <input type="text" formControlName="email" autocomplete="on" >
         <br><br>
         
         <label for="">Password : </label><br><br>
-        <input type="password" formControlName="password">
+        <input type="password" formControlName="password" autocomplete="on">
         <br><br><br><br><br>
         <button (click)="login()">Login</button>
        </form>

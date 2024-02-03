@@ -1,5 +1,9 @@
-<h2><ins>Enter Account details</ins></h2>
+
 <form [formGroup]="accountForm" action="">
+
+    <h1 *ngIf="!id"><ins>Create Account</ins></h1>
+    <h1 *ngIf="id"><ins>Update Account</ins></h1>
+
 
     <label for="">Name:</label>
     <input type="text" formControlName="account_name">
@@ -18,10 +22,10 @@
     <input type="text" formControlName="city">
     <br>
     
-    <label for="">Profile Pic:</label>
+    <label  for="">Profile Pic:</label>
     <input type="text" formControlName="profie_picture">
     <br>
 
-    <button  class="btn-danger"  (click)="submit()">SUBMIT</button>
+    <button  class="btn-danger"  (click)="submit()">{{ id ? 'UPDATE':'SUBMIT'}}</button>
 
 </form>

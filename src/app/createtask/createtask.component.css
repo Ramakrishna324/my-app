@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+
+}
+
+.title{
+    width: 100%;
+    height: 5%;
+    background-color: rgb(25, 41, 253);
+    text-align: center;
+    font-size:xx-large;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+
+}
+.body{
+    width: 100%;
+    height:90%;
+    background-color: rgb(40, 96, 252);
+    display: flex;
+    /* overflow: auto; */
+}
+.last{
+    width: 100%;
+    height: 5%;
+    background-color: rgb(70, 82, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.last button{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+
+}
+.left{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(55,134,190);
+}
+.topl{
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(158, 179, 37); */
+}
+.botl{
+    width: 100%;
+    height: 40%;
+    /* background-color: rgb(218, 215, 175); */
+}
+
+.right{
+    width: 60%;
+    height: 100%;
+    background-color:  rgb(55,134,190);
+    /* display: flex; */
+    
+}
+.topr{
+    width: 100%;
+    height: 35%;
+    /* background-color: rgb(113, 121, 236); */
+    overflow: auto;
+}
+.middler{
+    width: 100%;
+    height: 45%;
+    /* background-color: rgb(66, 133, 75); */
+    overflow: auto;
+}
+.botr{
+    width: 100%;
+    height: 20%;
+    /* background-color: rgb(37, 146, 179); */
+}
+label{
+    display: inline-block;
+    width: 130px;
+    margin: 20px;
+}
+i{
+    padding-left: 50px;
+    color: red;
+}

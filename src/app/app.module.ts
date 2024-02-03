@@ -38,6 +38,10 @@ import { PushvehiclesComponent } from './pushvehicles/pushvehicles.component';
 import { CreatestudentsComponent } from './createstudents/createstudents.component';
 import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreatetaskComponent } from './createtask/createtask.component';
+import { ViewtaskComponent } from './viewtask/viewtask.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +78,11 @@ import { CreateUserComponent } from './create-user/create-user.component';
     PushvehiclesComponent,
     CreatestudentsComponent,
     CreateaccountsComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    CreatetaskComponent,
+    ViewtaskComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

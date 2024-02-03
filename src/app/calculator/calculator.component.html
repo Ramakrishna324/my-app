@@ -1,4 +1,4 @@
-<div class="main">
+<!-- <div class="main">
     <div class="top">
         <div>
             <h1><ins>Calculator</ins></h1>
@@ -19,5 +19,34 @@
     <button (click)="div()">div</button>
     <br><br>
     <h2>Result is : {{result}}</h2>
+    </div>
+</div> -->
+
+<div class="main">
+    <div class="page">
+        <div class="top">
+            <img style="border-radius: 10px;" height="100%" width="100%" src="https://lirp.cdn-website.com/99af0f3d/dms3rep/multi/opt/s-1920w.jpg" alt="">
+            <div class="profile">
+                <img style="border-radius: 50%;" height="100px" src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" alt="">
+
+            </div>
+
+        </div>
+        <div class="bottom">
+            <h2>Morgan Sweeney</h2>
+            <p>Ant collector</p>
+            <div class="follow">
+              
+            <div><h1>{{followers}}</h1>
+                <p>followers</p></div>
+           
+                <div> <h1>1000</h1>
+                    <p>following</p></div>
+            </div>
+            <button (click)="follow()" class="btn btn-warning">follow</button>
+
+            
+
+        </div>
     </div>
 </div>

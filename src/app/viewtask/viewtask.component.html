@@ -1,0 +1,43 @@
+<div class="main">
+  <div class="data" *ngFor="let item of task">
+    <div>
+      <img width="250px" height="300px" src="{{ item.image }}" alt="" />
+    </div>
+
+    {{ item.name }} <br />
+    {{ item.model }} <br />
+    {{ item.price | price }} <br />
+    <p>Free delivery: {{ item.freeDelivery }}</p>
+    <button type="button" class="btn-warning" data-toggle="modal" data-target="#myModal">
+      ratings
+    </button>
+
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>one&#9733;---{{ item.ratings.one }}</p>
+              <p>two&#9733;---{{ item.ratings.two }}</p>
+              <p>three&#9733;---{{ item.ratings.three }}</p>
+              <p>four&#9733;---{{ item.ratings.four }}</p>
+              <p>five&#9733;---{{ item.ratings.five }}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  
+    <button (click)="delete(item.id)" class="btn-danger">delete</button>
+  </div>
+</div>

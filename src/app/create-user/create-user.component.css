@@ -20,3 +20,12 @@ button{
 .cards{
     margin: 0px 50px 0px 50px;
 }
+
+.dymanicform input{
+    width: 50px;
+}
+p{
+    font-size: small;
+    color: red;
+    margin-left: 180px;
+}
