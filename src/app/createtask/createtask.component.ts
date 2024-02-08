@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreatetaskService } from '../createtask.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-createtask',
@@ -9,7 +10,54 @@ import { CreatetaskService } from '../createtask.service';
 })
 export class CreatetaskComponent {
 
-  constructor(private _createtasksService:CreatetaskService) {}
+  public id:string = "";
+
+  constructor(private _createtasksService:CreatetaskService, private _activatedRoute:ActivatedRoute) {
+
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+      
+        this.id=data.id;
+
+        if(this.id){
+          _createtasksService.getCreate(data.id).subscribe(
+            (data:any)=>{
+
+              console.log(data)
+  
+              this.sellerForm.patchValue(data);
+
+           
+
+           
+              // this.sellerForm.patchValue(data.array)
+
+              // data.array.forEach(element => {
+                
+              // });
+              
+            // data.comments?.forEach((elem:any)=>{
+            //   this.sellerForm.get('comments')?.patchValue(elem)
+            // })
+
+            // this.sellerForm.get('comments')
+
+            // data.sellerInfo.forEach((elem:any)=>{
+            //   this.sellerForm.patchValue(elem)
+            // })
+  
+          },
+            (err:any)=>{
+              alert("An error occured")
+            }
+          )
+        }
+
+       
+      }
+    )
+
+  }
 
  
   public sellerForm:FormGroup = new FormGroup({
@@ -79,23 +127,35 @@ export class CreatetaskComponent {
     this.commentsFormArray.removeAt(i);
   }
 
-  // submit(){
-  //   console.log(this.sellerForm);
-  //   console.log(this.sellerFormArray)
-  // }
-
+ 
   pushdata(){
 
-    console.log(this.sellerForm.value);
+    console.log(this.sellerForm)
+    console.log(this.sellerForm.get('comments'))
 
-    this._createtasksService.pushCreate(this.sellerForm.value).subscribe(
-      (data:any)=>{
-        alert("Succesfully added")
-      },
-      (err:any)=>{
-        alert("An err0r occured")
-      }
-    )
+    if(this.id){
+
+      this._createtasksService.updateCreate(this.id,this.sellerForm.value).subscribe(
+        (data:any)=>{
+          alert("Succesfully added")
+        },
+        (err:any)=>{
+          alert("An err0r occured")
+        }
+      )
+
+    }
+    else{
+      this._createtasksService.pushCreate(this.sellerForm.value).subscribe(
+        (data:any)=>{
+          alert("Succesfully added")
+        },
+        (err:any)=>{
+          alert("An err0r occured")
+        }
+      )
+      
+    }
     
   }
 

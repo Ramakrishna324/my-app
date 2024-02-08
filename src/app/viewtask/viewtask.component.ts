@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewtaskService } from '../viewtask.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewtask',
@@ -10,7 +11,9 @@ export class ViewtaskComponent {
 
   public task:any = [];
 
-  constructor(private _viewtaskService:ViewtaskService) {
+  
+
+  constructor(private _viewtaskService:ViewtaskService,private _router:Router) {
 
     _viewtaskService.getTask().subscribe(
       (data:any)=>{
@@ -21,6 +24,11 @@ export class ViewtaskComponent {
         alert("Internal error occcured")
       }
     )
+
+  }
+
+  edit(id:string){
+    this._router.navigateByUrl("/dashboard/edit-task/"+id)
 
   }
 

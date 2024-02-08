@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  public ap:string = "";
+  public bp:string = "";
+
+  catch(value:any){
+    this.bp=value;
+
+  }
+
 }

@@ -71,7 +71,9 @@ const routes: Routes = [
     {path:'viewtask',component:ViewtaskComponent},
     {path:'parent',component:ParentComponent},
     {path:'edit-vehicle/:id',component:PushvehiclesComponent},
-    {path:'edit-account/:id',component:CreateaccountsComponent}
+    {path:'edit-account/:id',component:CreateaccountsComponent},
+    {path:'edit-task/:id',component:CreatetaskComponent}
+
 
 
 
