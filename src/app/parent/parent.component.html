@@ -5,3 +5,15 @@
 
 <app-child [ac]="ap" (bEvent)="catch($event)"></app-child>
 
+<br><br>
+
+<input type="number" placeholder="Enter rating" [(ngModel)]="rating">
+
+<app-rating [rating]="rating"></app-rating>
+
+<br>
+
+<input type="number" placeholder="Enter max char allowed" [(ngModel)]="max">
+
+
+<app-textarea [max]="max"></app-textarea>

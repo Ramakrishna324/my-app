@@ -1,0 +1,18 @@
+*{
+    display: inline-block;
+    margin: 50px;
+
+    
+    
+    
+}
+.inp{
+    height: 400px;
+    width: 300px;
+    background-color: pink;
+}
+.res{
+    height: 400px;
+    width: 300px;
+    background-color: rgb(192, 240, 255);
+}

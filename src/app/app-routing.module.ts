@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundError } from 'rxjs';
@@ -35,6 +35,10 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreatetaskComponent } from './createtask/createtask.component';
 import { ViewtaskComponent } from './viewtask/viewtask.component';
 import { ParentComponent } from './parent/parent.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { McalculatorComponent } from './mcalculator/mcalculator.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { TodoComponent } from './todotask/todo/todo.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -72,9 +76,15 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'edit-vehicle/:id',component:PushvehiclesComponent},
     {path:'edit-account/:id',component:CreateaccountsComponent},
-    {path:'edit-task/:id',component:CreatetaskComponent}
-
-
+    {path:'edit-task/:id',component:CreatetaskComponent},
+    {path:'siblings',component:SiblingsComponent},
+    {path:'mcalculator',component:McalculatorComponent},
+    {path:'about-company',component:AboutCompanyComponent},
+    {
+      path: 'contact',
+      loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    },
+    {path:'todo',component:TodoComponent},
 
 
 
@@ -85,7 +95,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

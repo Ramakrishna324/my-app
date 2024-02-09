@@ -42,6 +42,21 @@ import { CreatetaskComponent } from './createtask/createtask.component';
 import { ViewtaskComponent } from './viewtask/viewtask.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { Siblings1Component } from './siblings1/siblings1.component';
+import { Siblings2Component } from './siblings2/siblings2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { McalculatorComponent } from './mcalculator/mcalculator.component';
+import { InputComponent } from './input/input.component';
+import { ResultComponent } from './result/result.component';
+import { OperationsComponent } from './operations/operations.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { TodoComponent } from './todotask/todo/todo.component';
+import { TodoformComponent } from './todotask/todoform/todoform.component';
+import { TodoeditComponent } from './todotask/todoedit/todoedit.component';
+import { TodoviewComponent } from './todotask/todoview/todoview.component';
+import { TodotaskModule } from './todotask/todotask.module';
 
 @NgModule({
   declarations: [
@@ -82,17 +97,31 @@ import { ChildComponent } from './child/child.component';
     CreatetaskComponent,
     ViewtaskComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    SiblingsComponent,
+    Siblings1Component,
+    Siblings2Component,
+    RatingComponent,
+    TextareaComponent,
+    McalculatorComponent,
+    InputComponent,
+    ResultComponent,
+    OperationsComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule,
+    TodotaskModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
