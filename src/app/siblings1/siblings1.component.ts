@@ -8,6 +8,8 @@ import { CommonService } from '../common.service';
 })
 export class Siblings1Component {
 
+  public vasu:string = "";
+
   constructor(private _commomservice:CommonService) {
 
   }
@@ -16,6 +18,10 @@ export class Siblings1Component {
 
     this._commomservice.setValue();
 
+  }
+
+  submit(){
+    this._commomservice.setVasu(this.vasu);
   }
 
 }

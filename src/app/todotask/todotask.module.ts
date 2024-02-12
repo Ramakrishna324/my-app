@@ -4,6 +4,8 @@ import { TodoComponent } from './todo/todo.component';
 import { TodoformComponent } from './todoform/todoform.component';
 import { TodoeditComponent } from './todoedit/todoedit.component';
 import { TodoviewComponent } from './todoview/todoview.component';
+import { TodoopComponent } from './todoop/todoop.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,16 +14,20 @@ import { TodoviewComponent } from './todoview/todoview.component';
     TodoComponent,
     TodoformComponent,
     TodoeditComponent,
-    TodoviewComponent
+    TodoviewComponent,
+    TodoopComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     TodoComponent,
     TodoformComponent,
     TodoeditComponent,
-    TodoviewComponent
+    TodoviewComponent,
+    TodoopComponent
   ]
 })
 export class TodotaskModule { }

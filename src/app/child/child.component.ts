@@ -7,15 +7,24 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChildComponent {
 
+  public childdata:string = "";
+
   public bc:string = "";
 
   @Input() public ac:string = "";
 
-  @Output() public bEvent:EventEmitter<string> = new EventEmitter();
+  // @Output() public bEvent:EventEmitter<string> = new EventEmitter();
+
+  @Output() public childevent:EventEmitter<string> = new EventEmitter();
 
   send(){
 
-    this.bEvent.emit(this.bc)
+    // this.bEvent.emit(this.bc)
+
+  }
+
+  submit(){
+    this.childevent.emit("1233")
 
   }
 

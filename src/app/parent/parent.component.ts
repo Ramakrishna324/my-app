@@ -14,9 +14,8 @@ export class ParentComponent {
 
   public max:number = 0;
 
-  catch(value:any){
-    this.bp=value;
-
+  catch(data:any){
+    this.bp=data;
   }
 
 }

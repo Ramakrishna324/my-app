@@ -6,6 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CommonService {
 
+
+  
   public count:number = 0;
 
   public cresult:number = 0;
@@ -14,7 +16,34 @@ export class CommonService {
 
   public resultSub$:BehaviorSubject<number> = new BehaviorSubject(0);
 
+  public vasuSub:BehaviorSubject<any> = new BehaviorSubject("");
+
   constructor() { }
+
+
+
+  setVasu(data:any){
+
+    this.vasuSub.next(data);
+
+  }
+  getVasu(){
+    return this.vasuSub.asObservable();
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   setValue(){
     this.countSub$.next(++this.count)

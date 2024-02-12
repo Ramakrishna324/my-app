@@ -1,1 +1,14 @@
-<p>todoform works!</p>
+<div class="main">
+    <div *ngFor="let todoForm of todoformarray ; let i=index" class="data"  >
+
+        <h3>Task : {{todoForm.task.slice(0,18)}}...</h3>
+        <h3>Time : {{todoForm.time}}</h3>
+        <button class="btn-success" (click)="view(todoForm)">View</button>
+        <button class="btn-warning" (click)="edit(todoForm)">Edit</button>
+        <button class="btn-danger" (click)="delete(i)">Delete</button>
+        
+    
+        
+
+    </div>
+</div>
